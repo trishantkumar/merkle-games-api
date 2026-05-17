@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { mount } from "@vue/test-utils";
 import { mountSuspended } from "@nuxt/test-utils/runtime";
-import Loader from "../app/components/Atoms/Loader.vue";
+import Loader from "../app/components/Molecules/Loader.vue";
 import GamesCard from "../app/components/Organisms/GamesCard.vue";
 
 describe("test components rendering", () => {
