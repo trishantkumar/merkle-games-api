@@ -1,29 +1,164 @@
-# Client Application
+# Project Name
 
-This folder is reserved for your frontend application.
+Merkle Gaming - A web application to list games built using Nuxt 4
 
-## Getting Started
+# Overview
 
-Build your frontend application (Next.js, Nuxt, React, Vue, etc.) in this directory to connect to the Game API.
+This platform allows users to explore games using the provided REST API endpoints
 
-### Example Structure
+# Features
 
-```
+- Games Listing Page
+  - Search games by name
+  - Filter games by genre
+  - Display games by rating and date
+  - Display 15 games in cards in grid layout
+- Game Detail Page
+  - Display game details by selected route
+  - Display banner image from cover image
+  - Display platforms and genres
+  - Display game description
+  - Display game ratings
+  - Display reviews
+  - Display back button to games listing page
+- Dark and Light Mode
+- Responsive Design
+- SEO Optimized
+- Lazy Loading
+- Optimized Images
+
+# Design patterns
+
+We are using Atomic Design patterns in this project for component architecture.
+
+- Atoms - Contain html tags such as Icon.
+- Molecules - Contains group of html tags such as Loader, Star Rating.
+- Organisms - It is a complex component which contains group of molecules such as Header, Footer, Action Section, Game Card, Game Listing, Hero Section.
+- Templates - It is a template/layout of a page which contains group of organisms such as Game Listing Template, Game Detail Template.
+- Pages - It is a excat page/view which contains a template such as Games Listing Page, Game Detail Page.
+
+# Tech Stack
+
+- Nuxt v4
+- TypeScript
+- Composition API
+- SCSS
+- Pinia
+- Vitest
+
+# Folder Structure
+
+```bash
 client/
-├── package.json
-├── src/
+├── app/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── styles/
 │   ├── components/
+│   │   ├── atoms/
+│   │   ├── molecules/
+│   │   ├── organisms/
+│   │   └── templates/
+│   ├── composables/
+│   ├── layouts/
 │   ├── pages/
-│   └── ...
-└── ...
+│   ├── services/
+│   ├── stores/
+│   ├── types/
+│   └── utils/
+│   └── app.vue
+├── tests/
+├── .env
+├── nuxt.config.ts
+├── package.json
+├── vitest.config.ts
+└── README.md
 ```
 
-### Connecting to the API
+# Installation
 
-The backend API runs on `http://localhost:8000` by default. Available endpoints:
+Clone repository:
 
-- **REST API**: `http://localhost:8000/api/v1`
-- **GraphQL**: `http://localhost:8000/graphql`
-- **API Docs**: `http://localhost:8000/api-docs`
+```bash
+git clone <repo-url>
+```
 
-See the main [README.md](../README.md) for full API documentation.
+## Install dependecies
+
+Make sure to install dependencies:
+
+```bash
+# npm
+npm install
+```
+
+## Environment Variables
+
+Create `.env` file:
+
+Copy data from `.env.example` file:
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+```
+
+## Test cases
+
+Run the test cases:
+
+```bash
+# npm
+npm run test
+```
+
+## Performance Optimizations
+
+- Lazy loading of components and routes.
+- Caching of API responses inbuilt in Nuxt framework with useAsyncData and useFetch.
+- Code splitting for better bundle size.
+- Image optimization using Nuxt Image module and using webp format for images.
+- Preloading assets in nuxt config file such as fonts.
+- Using semantic html tags such Header, Footer, Section, Article.
+- For SEO using SSR mode.
+
+## Accessibility
+
+- Using semantic html tags such Header, Footer, Section, Article.
+- Using proper ARIA labels for accessibility.
+- Using proper contrast colors for better readability.
+
+## Future Improvements
+
+- Improve responsive design for tablets.
+- Add more test cases.
+- Add E2E testing using Playwright.
+- Add loading skeleton for better user experience.
+- Add robust error handling and error states.
+- Add all tags in Atoms such as button and select.
+- Add virtual scrolling for better performance.
+
+## Author
+
+Trishant Kumar
+[trishantshishodia@gmail.com](trishantshishodia@gmail.com)
