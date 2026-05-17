@@ -13,5 +13,5 @@ export const getCoverImage = (images: Image[]): string => {
   const coverImage =
     images?.find((image) => image.image_type === "Cover")?.image_url || "";
   const mediaBase = useRuntimeConfig().public.mediaBase;
-  return coverImage ? `${mediaBase}${coverImage}` : "";
+  return coverImage ? `${mediaBase}${coverImage}` : "/images/fallback.png";
 };
