@@ -22,7 +22,7 @@ This platform allows users to explore games using the provided REST API endpoint
   - Display reviews
   - Display back button to games listing page
 - Dark and Light Mode
-- Responsive Design
+- Responsive Design (Mobile and Desktop only)
 - SEO Optimized
 - Lazy Loading
 - Optimized Images
@@ -31,14 +31,15 @@ This platform allows users to explore games using the provided REST API endpoint
 
 We are using Atomic Design patterns in this project for component architecture.
 
-- Atoms - Contain html tags such as Icon.
+- Atoms - Contains html tags such as Icon.
 - Molecules - Contains group of html tags such as Loader, Star Rating.
 - Organisms - It is a complex component which contains group of molecules such as Header, Footer, Action Section, Game Card, Game Listing, Hero Section.
 - Templates - It is a template/layout of a page which contains group of organisms such as Game Listing Template, Game Detail Template.
-- Pages - It is a excat page/view which contains a template such as Games Listing Page, Game Detail Page.
+- Pages - These are the exact pages/views which contains a template such as Games Listing Page, Game Detail Page.
 
 # Tech Stack
 
+- Vue 3
 - Nuxt v4
 - TypeScript
 - Composition API
@@ -80,7 +81,7 @@ client/
 Clone repository:
 
 ```bash
-git clone <repo-url>
+git clone <https://github.com/trishantkumar/merkle-games-api.git>
 ```
 
 ## Install dependecies
@@ -135,7 +136,6 @@ npm run test
 ## Performance Optimizations
 
 - Lazy loading of components and routes.
-- Caching of API responses inbuilt in Nuxt framework with useAsyncData and useFetch.
 - Code splitting for better bundle size.
 - Image optimization using Nuxt Image module and using webp format for images.
 - Preloading assets in nuxt config file such as fonts.
